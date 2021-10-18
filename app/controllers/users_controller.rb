@@ -13,7 +13,7 @@ class UsersController < ApplicationController
       #TODO:成功したことを
       @user.pass = BCrypt::Password.create(params[:user][:pass])
       @user.save
-      flash[:notice] = '[１メッセージ追加しました]'
+      flash[:notice] = '[新規登録しました]'
       redirect_to users_path
     else
       render 'new'
